@@ -25,7 +25,6 @@ public class BruteForce {
 
             while (reader.ready()) {
 
-                //for (int n = inputShift; n < ALPHABET.length(); n++) {
                     if (next) {
                         inputString = reader.readLine();
 
@@ -127,7 +126,7 @@ public class BruteForce {
                 }
             }
         } else {
-            System.out.println("SORRY, THIS STRING IS EMPTY 😒");
+            System.out.println("SORRY, THIS STRING IS EMPTY");
             next = true;
         }
 

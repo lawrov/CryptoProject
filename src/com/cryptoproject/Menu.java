@@ -1,6 +1,5 @@
 package com.cryptoproject;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 /*
