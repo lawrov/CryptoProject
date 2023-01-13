@@ -5,6 +5,7 @@ import java.util.Scanner;
 import static java.lang.Character.toLowerCase;
 import static java.lang.Character.toUpperCase;
 
+//все аналогично как и в енкодере
 public class FileDecoder {
     private final String ALPHABET = " абвгдеёжзийклмнопрстуфхцчшщъыьэюя.,\":-!?0123456789";
     private String src;

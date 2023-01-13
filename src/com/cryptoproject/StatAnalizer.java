@@ -7,8 +7,6 @@ import static java.lang.Character.toUpperCase;
 
 // * * * DECRYPTION BY MAPS * * *
 public class StatAnalizer {
-    private SortedMap<Double, String> map = new TreeMap<>();
-    private SortedMap<Double, String> encMap = new TreeMap<>();
     private String src;
     private String dst;
 
@@ -21,12 +19,12 @@ public class StatAnalizer {
     public void decodeByMap() {
         StatMap eMap = new StatMap();
         eMap.setSource(src);
-        encMap = eMap.getMap();             // creating an encrypted file map
+        SortedMap<Double, String> encMap = eMap.getMap();             // creating an encrypted file map
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите имя файла для сбора статистики: ");
         StatMap sMap = new StatMap();
         sMap.setSource(scanner.nextLine());
-        map = sMap.getMap();                // creating a map of the original file (or part of file)
+        SortedMap<Double, String> map = sMap.getMap();                // creating a map of the original file (or part of file)
         //System.out.println(encMap);
         //System.out.println(map);
 

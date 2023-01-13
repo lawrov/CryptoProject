@@ -6,6 +6,8 @@ import java.util.TreeMap;
 public class DecoderByKey {
 
     private SortedMap<Double, String> map = new TreeMap<>();
+
+    //тоже стоит вынести алфавит отдельно
     private final String ALPHABET = " абвгдеёжзийклмнопрстуфхцчшщъыьэюя.,\":-!?0123456789";
     private String src;
     private String dst;

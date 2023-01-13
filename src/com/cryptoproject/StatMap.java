@@ -7,6 +7,7 @@ import java.util.TreeMap;
 
 import static java.lang.Character.toLowerCase;
 
+//такие классы лучше называть Util
 public class StatMap {
     private SortedMap<Double,String> map = new TreeMap<Double,String>(Comparator.reverseOrder());
     private static final String ALPHABET = " абвгдеёжзийклмнопрстуфхцчшщъыьэюя.,\":-!?0123456789";

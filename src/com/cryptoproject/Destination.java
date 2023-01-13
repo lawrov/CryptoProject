@@ -3,7 +3,7 @@ package com.cryptoproject;
 import java.util.Scanner;
 
 public class Destination {
-    private int item;
+    private final int item;
     private String src;
 
     public Destination(int item) {
