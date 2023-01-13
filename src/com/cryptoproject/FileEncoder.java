@@ -5,6 +5,8 @@ import java.util.Scanner;
 import static java.lang.Character.toLowerCase;
 
 public class FileEncoder {
+
+    //алафавит придеться пару раз дублировать, лучше его вынести в класс Util
     private final String ALPHABET = " абвгдеёжзийклмнопрстуфхцчшщъыьэюя.,\":-!?0123456789";
     private String src;
     private String dst;
@@ -26,7 +28,7 @@ public class FileEncoder {
                 System.out.println("Введите число!");
             } else {
                 inputShift = scanner.nextInt();        // number of shifts
-                if (inputShift > 50) {
+                if (inputShift > 50) {//50 это магическое число, никто не знает что оно значит. Его надо вынести в перменную с понятным названием и если надо комментарием
                     inputShift = inputShift % 50;
                     System.out.println("Real Key: " + inputShift);
                 }
@@ -40,7 +42,7 @@ public class FileEncoder {
                     for (int j = 0; j < alphabetArray.length; j++) {
                         if (toLowerCase(inputString.charAt(i)) == alphabetArray[j]) {
                             if (j + inputShift > 50) {
-                                shift = (j + inputShift) % 51;
+                                shift = (j + inputShift) % 51;//50 лучше отдельной переменной, поэтому тут лучше указать эту пременную + 1
                             } else shift = j + inputShift;
                             outCharArray[i] = alphabetArray[shift];
                         }

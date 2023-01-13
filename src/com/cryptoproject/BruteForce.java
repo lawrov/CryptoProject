@@ -7,6 +7,7 @@ import static java.lang.Character.toLowerCase;
 import static java.lang.Character.toUpperCase;
 
 public class BruteForce {
+    //аналогично стоит вынести алфавит
     private final String ALPHABET = " абвгдеёжзийклмнопрстуфхцчшщъыьэюя.,\":-!?0123456789";
     private String src;
     private String dst;
@@ -33,7 +34,7 @@ public class BruteForce {
                     char[] alphabetArray = ALPHABET.toCharArray();
                     int shift;
                     char[] outCharArray = new char[inputString.length()];
-                        if (inputShift > 51) {
+                        if (inputShift > 51) {//тоже магическое число
                             System.out.println("=============================");
                             System.out.println("   Цикл подбора завершен");
                             System.out.println("Рекомендуется сменить строку!");
@@ -64,12 +65,14 @@ public class BruteForce {
 
 // ============ CHECK RESULT =============
     private void examResult(char[] inputCharArray) {
+        //лучше этот словарь вынести из метода, чтобы нам было проще его изменять
         String[] dictionary = new String[]{" и "," в "," а "," на "," с "," из "," но "," если "," тоже "," что "}; // condition set ". ", ": ", "! ", "? ",
         String inputString = new String(inputCharArray);
         if (!"".equals(inputString)) {
             boolean flag = false;
             for (int i = 0; i < dictionary.length; i++) {
                 if (inputString.toLowerCase().contains(dictionary[i])) {
+                    //можно одним вызовом принтлн
                     System.out.println("CURRENT KEY: " + (inputShift));
                     System.out.println("----------------------------");
                     System.out.println("Пример дешифрованного текста:");
